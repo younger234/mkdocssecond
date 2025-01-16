@@ -1,0 +1,142 @@
+site_name: younger234's notebook
+
+nav:
+  - 主页: index.md
+  - 通识基础课: 
+    - Introduction: 通识基础课\Introduction.md
+    - 数学分析: 通识基础课\数学分析.md
+    - 普通物理学: 通识基础课\普通物理学.md
+  - 计算机专业课: 
+    - Introduction: 计算机专业课\Introduction.md
+    - 数字逻辑设计: 计算机专业课\数字逻辑设计.md
+    - 数据结构基础: 计算机专业课\数据结构基础.md
+    - 高级数据结构与算法基础: 计算机专业课\ADS.md
+    - 计算机组成: 计算机专业课\计算机组成.md
+  - 通识选修课:
+    - Introduction: 通识选修课\Introduction.md
+  - 昏黄色的记忆~: 
+    - Introduction: 记忆\Introduction.md
+
+theme:
+  name: material
+  palette:
+    #primary: red
+    #accent: deep orange
+
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+        primary: red
+
+    
+  language: zh
+  #logo: https://s1.imagehub.cc/images/2025/01/05/64eafdf8c27f482c7ecb83003d460d6a.webp
+  features: 
+    - announce.dismiss #呈现可标记为由用户读取的临时公告，可以包含一个用于取消当前公告的按钮
+    - navigation.instant 
+    #- header.autohide  #自动隐藏
+    - navigation.instant.progress
+    # - navigation.prune #渲染的 HTML 中仅包含可见的导航项
+    - navigation.tracking #地址栏中的 URL 将自动更新为在目录中突出显示的活动锚点
+    - navigation.tabs #顶级部分将呈现在上面视口标题下方的菜单层中，但在移动设备上保持原样
+    # - navigation.tabs.sticky  #启用粘性选项卡后，导航选项卡将锁定在标题下方，并在向下滚动时始终保持可见
+    - navigation.sections #启用部分后，顶级部分在边栏中呈现为1220px以上视口的组，但在移动设备上保持原样
+    - navigation.top # 返回顶部的按钮 在上滑时出现
+    - navigation.footer #页脚将呈现在边栏中，但在移动设备上保持原样
+    - search.suggest # 搜索输入一些字母时推荐补全整个单词
+    - search.highlight # 搜索出的文章关键词加入高亮
+    - search.share #搜索分享按钮
+    - navigation.expand # 打开Tab时左侧目录全部展开
+    - navigation.indexes #启用节索引页后，可以将文档直接附加到节
+    - content.tabs.link
+    - content.tooltips
+    - content.code.copy
+    - content.code.select
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate 
+
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+      link: octicons/link-16
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - meta
+  - def_list
+  - attr_list
+  - md_in_html
+  - sane_lists
+  - admonition
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+    
+extra_css:
+  - css/custom.css
+  - https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  analytics:
+      provider: google #谷歌分析
+      property:
+
+      # 网页底部反馈
+      feedback:
+        title: 此页面有帮助吗？
+        ratings:
+          - icon: material/thumb-up-outline #图标可自定义
+            name: This page was helpful
+            data: 1
+            note: >-
+              谢谢你的反馈！
+          - icon: material/thumb-down-outline
+            name: This page could be improved
+            data: 0
+            note: >-
+              Thanks for your feedback! Help us improve this page by
+              using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
+  
+
+
+  
+  
