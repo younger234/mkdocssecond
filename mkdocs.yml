@@ -1,4 +1,5 @@
 site_name: younger234's notebook
+site_url: https://younger234.github.io/mkdocssecond/
 
 nav:
   - 主页: index.md
