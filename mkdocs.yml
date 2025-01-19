@@ -6,6 +6,8 @@ nav:
     - Introduction: 通识基础课/Introduction.md
     - 数学分析: 通识基础课/数学分析.md
     - 普通物理学: 通识基础课/普通物理学.md
+    - 离散数学: 
+      - chapter1: 通识基础课/离散数学/chapter1.md
   - 计算机专业课: 
     - Introduction: 计算机专业课/Introduction.md
     - 数字逻辑设计: 计算机专业课/数字逻辑设计.md
@@ -14,6 +16,9 @@ nav:
     - 计算机组成: 计算机专业课/计算机组成.md
   - 通识选修课:
     - Introduction: 通识选修课/Introduction.md
+  - 自己的课:
+    - Introduction: 自己的课/Introduction.md
+    - CS106l: 自己的课/CS106l.md  
   - 昏黄色的记忆~: 
     - Introduction: 记忆/Introduction.md
 
