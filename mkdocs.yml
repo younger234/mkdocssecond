@@ -8,6 +8,7 @@ nav:
     - 普通物理学: 通识基础课/普通物理学.md
     - 离散数学: 
       - chapter1: 通识基础课/离散数学/chapter1.md
+      - chapter2: 通识基础课/离散数学/chapter2.md
   - 计算机专业课: 
     - Introduction: 计算机专业课/Introduction.md
     - 数字逻辑设计: 计算机专业课/数字逻辑设计.md
@@ -18,9 +19,14 @@ nav:
     - Introduction: 通识选修课/Introduction.md
   - 自己的课:
     - Introduction: 自己的课/Introduction.md
-    - CS106l: 自己的课/CS106l.md  
+    - CS106l: 自己的课/CS106l.md 
+    - 3DGS: 
+      - Introduction: 自己的课\3DGS\Introduction.md
+    - CUDA编程: 
+      - Introduction: 自己的课\CUDA编程\Introduction.md
+      - lecture1: 自己的课\CUDA编程\lecture1.md
   - 昏黄色的记忆~: 
-    - Introduction: 记忆/Introduction.md
+    - Introduction: 记忆\Introduction.md
 
 theme:
   name: material
