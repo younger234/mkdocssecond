@@ -21,12 +21,12 @@ nav:
     - Introduction: 自己的课/Introduction.md
     - CS106l: 自己的课/CS106l.md 
     - 3DGS: 
-      - Introduction: 自己的课\3DGS\Introduction.md
+      - Introduction: 自己的课/3DGS/Introduction.md
     - CUDA编程: 
-      - Introduction: 自己的课\CUDA编程\Introduction.md
-      - lecture1: 自己的课\CUDA编程\lecture1.md
+      - Introduction: 自己的课/CUDA编程/Introduction.md
+      - lecture1: 自己的课/CUDA编程/lecture1.md
   - 昏黄色的记忆~: 
-    - Introduction: 记忆\Introduction.md
+    - Introduction: 记忆/Introduction.md
 
 theme:
   name: material
