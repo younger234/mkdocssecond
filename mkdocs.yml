@@ -25,6 +25,9 @@ nav:
     - CUDA编程: 
       - Introduction: 自己的课/CUDA编程/Introduction.md
       - lecture1: 自己的课/CUDA编程/lecture1.md
+  - LeetCode:
+    - Introduction: LeetCode/Introduction.md
+    - chapter1: LeetCode/chapter1.md 
   - 昏黄色的记忆~: 
     - Introduction: 记忆/Introduction.md
 
