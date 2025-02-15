@@ -9,14 +9,14 @@ nav:
     - 离散数学: 
       - chapter1: 通识基础课/离散数学/chapter1.md
       - chapter2: 通识基础课/离散数学/chapter2.md
+  - 通识选修课:
+    - Introduction: 通识选修课/Introduction.md
   - 计算机专业课: 
     - Introduction: 计算机专业课/Introduction.md
     - 数字逻辑设计: 计算机专业课/数字逻辑设计.md
     - 数据结构基础: 计算机专业课/数据结构基础.md
     - 高级数据结构与算法基础: 计算机专业课/ADS.md
     - 计算机组成: 计算机专业课/计算机组成.md
-  - 通识选修课:
-    - Introduction: 通识选修课/Introduction.md
   - 自己的课:
     - Introduction: 自己的课/Introduction.md
     - CS106l: 自己的课/CS106l.md 
