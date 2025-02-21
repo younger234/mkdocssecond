@@ -9,6 +9,10 @@ nav:
     - 离散数学: 
       - chapter1: 通识基础课/离散数学/chapter1.md
       - chapter2: 通识基础课/离散数学/chapter2.md
+    - 工程图学: 通识基础课/工程图学/chapter1.md
+    - 毛概: 通识基础课/毛概/Introduction.md
+    
+  
   - 通识选修课:
     - Introduction: 通识选修课/Introduction.md
   - 计算机专业课: 
@@ -19,6 +23,7 @@ nav:
     - 计算机组成: 计算机专业课/计算机组成.md
     - 数据库系统: 
       - Introduction: 计算机专业课/数据库系统/Introduction.md
+      - SQL语言: 计算机专业课/数据库系统/SQL语言.md
     - oop:
       - Introduction: 计算机专业课/oop/Introduction.md
     - 计算机体系结构: 
@@ -43,8 +48,6 @@ nav:
 
 theme:
   name: material
-  theme:
-  theme:
   palette:
 
     # Palette toggle for automatic mode
@@ -146,7 +149,7 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 4
-  # - meta(用不了，需要赞助原作者)
+  #- meta(用不了，需要赞助原作者)
   - def_list
   - attr_list
   - md_in_html
@@ -177,6 +180,12 @@ extra_css:
 extra_javascript:
   # - javascripts/mathjax.js(先注释了)
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+#plugins:
+ # - search
+ # - collapse  # 添加这一行来启用折叠插件
+
+
+
 
 extra:
   analytics:

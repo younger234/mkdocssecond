@@ -1,5 +1,7 @@
 # chapter1:Introduction
 
+关于这门课的实验相关网站，[click here](https://github.com/lhmd/ZJU-course/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F)
+
 ## 1.1 Database System
 ![alt text](image.png)
 

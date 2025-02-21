@@ -321,3 +321,52 @@ public:
 ```
 
 复习一下链表吧，顺便把c++中的new函数用熟练，例如本题中ListNode* dump=new ListNode(0,head);同时，链表经常建立一个空表头来避免对头节点的分类讨论。还蛮好的一道基础题。
+
+# 20.有效的括号
+```cpp
+class Solution {
+public:
+    bool isValid(string s) {
+        int n=s.size();
+        if(n%2==1) return false;
+        stack<char> stk;
+        unordered_map<char,char> m={
+            {')','('},{']','['},{'}','{'}
+        };
+        for(char c:s){
+            if(m.count(c)){
+                if(stk.empty()||stk.top()!=m[c]){
+                    return false;
+                }else{
+                    stk.pop();
+                }
+            }else{
+                stk.push(c);
+            }
+        }
+        return stk.empty();
+    }
+};
+```
+注意堆栈的使用！stack类的函数，pop(),empty(),push(···)。同时，关于map，map.count()函数是用于键的计数，而不是值的计数。
+
+或者用简单的方法，直接枚举三种情况：
+```cpp
+class Solution {
+public:
+    bool isValid(string s) {
+      stack<int> st;
+      for (int i = 0; i < s.size(); i++) {
+        if (s[i] == '(' || s[i] == '[' || s[i] == '{') st.push(i);
+        else {
+          if (st.empty()) return false;
+          if (s[i] == ')' && s[st.top()] != '(') return false;
+          if (s[i] == '}' && s[st.top()] != '{') return false;
+          if (s[i] == ']' && s[st.top()] != '[') return false;
+          st.pop();
+        }
+      }
+      return st.empty();
+    }
+};
+```

@@ -111,3 +111,23 @@ n是前面的底边距离眼睛的距离，f是后面的底边距离眼睛的距
 
 ![alt text](image-32.png)
 1. 补上笔记2.23:27
+
+
+# 3DGS 颜色
+![alt text](image-33.png)
+![alt text](image-34.png)
+![alt text](image-35.png)
+![ ](image-36.png)
+
+# 3DGS 足迹合成
+![alt text](image-37.png)
+![alt text](image-38.png)
+
+
+![alt text](image-39.png)
+![alt text](image-40.png)
+![alt text](image-41.png)
+![alt text](image-42.png)
+
+
+# 机器学习与参数评估
