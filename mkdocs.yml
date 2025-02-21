@@ -7,8 +7,8 @@ nav:
     - 数学分析: 通识基础课/数学分析.md
     - 普通物理学: 通识基础课/普通物理学.md
     - 离散数学: 
+      - Introduction: 通识基础课/离散数学/Introduction.md
       - chapter1: 通识基础课/离散数学/chapter1.md
-      - chapter2: 通识基础课/离散数学/chapter2.md
     - 工程图学: 通识基础课/工程图学/chapter1.md
     - 毛概: 通识基础课/毛概/Introduction.md
     
@@ -48,6 +48,7 @@ nav:
 
 theme:
   name: material
+  custom_dir: overrides  #主要是这一行
   palette:
 
     # Palette toggle for automatic mode

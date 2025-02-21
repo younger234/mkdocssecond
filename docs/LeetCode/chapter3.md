@@ -292,3 +292,52 @@ public:
     }
 };
 ```
+
+# 27.移除元素
+简单无脑
+```cpp
+class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) {
+        vector<int> ans;
+        int k=0;
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]!=val){
+                nums[k]=nums[i];
+                k++;
+            }
+        }
+        return k;
+    }
+};
+```
+
+# 28. 找出字符串中第一个匹配项的下标
+简单无脑
+```cpp
+class Solution {
+    bool issame(string haystack,string needle,int i){
+        int n=needle.size();
+        int j;
+        for(j=0;j<n;j++){
+            if(haystack[i+j]!=needle[j]) return false;
+        }
+        return true;
+       
+    }
+
+public:
+    int strStr(string haystack, string needle) {
+         if (needle.empty()) return 0;
+
+        for(int i=0;i<haystack.length();i++){
+            if(issame(haystack,needle,i)){
+                return i;
+            }
+        }
+        
+        return -1;
+    }
+};
+```
+
