@@ -1,0 +1,2058 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Introduction/">
+      
+      
+        <link rel="next" href="../SQL%E8%AF%AD%E8%A8%80/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+    
+    
+      
+        <title>chapter2 - younger234's notebook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-2-the-rational-model" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="younger234&#39;s notebook" class="md-header__button md-logo" aria-label="younger234's notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            younger234's notebook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              chapter2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to automatic mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to automatic mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="lime" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  主页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E9%80%9A%E8%AF%86%E5%9F%BA%E7%A1%80%E8%AF%BE/Introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  通识基础课
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E9%80%9A%E8%AF%86%E9%80%89%E4%BF%AE%E8%AF%BE/Introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  通识选修课
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  计算机专业课
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E8%87%AA%E5%B7%B1%E7%9A%84%E8%AF%BE/Introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  自己的课
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../LeetCode/Introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  LeetCode
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E8%AE%B0%E5%BF%86/Introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  昏黄色的记忆~
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="younger234&#39;s notebook" class="md-nav__button md-logo" aria-label="younger234's notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    younger234's notebook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    主页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../%E9%80%9A%E8%AF%86%E5%9F%BA%E7%A1%80%E8%AF%BE/Introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    通识基础课
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../%E9%80%9A%E8%AF%86%E9%80%89%E4%BF%AE%E8%AF%BE/Introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    通识选修课
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    计算机专业课
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            计算机专业课
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数字逻辑设计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构基础
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ADS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    高级数据结构与算法基础
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机组成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数据库系统
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            数据库系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    chapter2
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    chapter2
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1structure-of-relational-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Structure of Relational Databases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Structure of Relational Databases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Concepts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-relations-are-unordered" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 relations are unordered
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-database-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 Database schema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Keys
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-database-and-schema-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Database and Schema diagram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-rational-query-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 Rational Query languages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 Rational Query languages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Select
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-union" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 union
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-set-difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 set difference
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-cartesian-product-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Cartesian-Product Operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-compositions-of-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6 compositions of operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-rename-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7 rename operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58-some-query-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.8 Some Query Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#59-formal-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.9 Formal Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#510-additional-operands" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.10 Additional operands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.10 Additional operands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5101-set-intersection" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.10.1 Set intersection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5102-natural-join-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.10.2 Natural-Join operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5103-outer-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.10.3 Outer Join
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5104-semijoin" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.10.4 semijoin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5105-division-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.10.5 Division Operation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#511-aggregate-functions-and-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.11 Aggregate Functions and Operations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-multiset-relational-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Multiset Relational Algebra
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-sql-and-relational-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 SQL and Relational Algebra
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SQL%E8%AF%AD%E8%A8%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQL语言
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../oop/Introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    oop
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/Introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    计算机体系结构
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../%E8%87%AA%E5%B7%B1%E7%9A%84%E8%AF%BE/Introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    自己的课
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../LeetCode/Introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    LeetCode
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../%E8%AE%B0%E5%BF%86/Introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    昏黄色的记忆~
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1structure-of-relational-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Structure of Relational Databases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Structure of Relational Databases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Concepts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-relations-are-unordered" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 relations are unordered
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-database-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 Database schema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Keys
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-database-and-schema-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Database and Schema diagram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-rational-query-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 Rational Query languages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 Rational Query languages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Select
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-union" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 union
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-set-difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 set difference
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-cartesian-product-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Cartesian-Product Operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-compositions-of-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6 compositions of operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-rename-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7 rename operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58-some-query-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.8 Some Query Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#59-formal-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.9 Formal Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#510-additional-operands" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.10 Additional operands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.10 Additional operands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5101-set-intersection" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.10.1 Set intersection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5102-natural-join-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.10.2 Natural-Join operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5103-outer-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.10.3 Outer Join
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5104-semijoin" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.10.4 semijoin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5105-division-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.10.5 Division Operation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#511-aggregate-functions-and-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.11 Aggregate Functions and Operations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-multiset-relational-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Multiset Relational Algebra
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-sql-and-relational-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 SQL and Relational Algebra
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+
+<h1 id="chapter-2-the-rational-model">chapter 2: The Rational Model<a class="headerlink" href="#chapter-2-the-rational-model" title="Permanent link">&para;</a></h1>
+<h2 id="1structure-of-relational-databases">1.Structure of Relational Databases<a class="headerlink" href="#1structure-of-relational-databases" title="Permanent link">&para;</a></h2>
+<h3 id="11-concepts">1.1 Concepts<a class="headerlink" href="#11-concepts" title="Permanent link">&para;</a></h3>
+<p>Formally, given sets <code>D1, D2, …. Dn</code> ,a <code>relation r</code> is a subset of  <code>D1 x  D2  x … x Dn</code>.Thus, a relation is a set of <code>n-tuples (a1, a2, …, an)</code> where each <code>ai 属于 Di</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><img alt="alt text" src="../image-15.png" /></p>
+</div>
+<p>A1, A2, …, An are attributes.A1, A2, …, An 是属性</p>
+<p>R = (A1, A2, …, An ) is a relation schema.R = (A1, A2, …, An) 是一个关系模式</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code>instructor  = (ID,  name, dept_name, salary)</code>
+A relation instance <code>r</code> defined over <code>schema R</code> is denoted  by <code>r (R)</code>.The current values a relation are specified by a table.An <code>element t</code> of relation <code>r</code> is called a  tuple and is represented by a row in a table</p>
+</div>
+<h3 id="12-attributes">1.2  attributes<a class="headerlink" href="#12-attributes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The <code>set of allowed values</code> for each attribute is called the <code>domain（域）</code> of the attribute</li>
+<li>Attribute values are (normally) required to be <code>atomic（原子的</code>）; that is, indivisible  (attribute values不可再分，如诸葛亮，张飞，不要再拆成姓和名)</li>
+<li>The special value null （空值） is a member of every domain(任何一个值域里面都有一个null值)</li>
+<li>The null value causes complications in the definition of many operations</li>
+</ul>
+<h3 id="13-relations-are-unordered">1.3 relations are unordered<a class="headerlink" href="#13-relations-are-unordered" title="Permanent link">&para;</a></h3>
+<p>Order of tuples is irrelevant (tuples may be stored in an arbitrary order)</p>
+<h2 id="2-database-schema">2 Database schema<a class="headerlink" href="#2-database-schema" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Database schema</strong> -- is the logical structure of the database.</li>
+<li><strong>Database instance</strong> -- is a snapshot of the data in the database at a given instant in time.数据库实例：某个时间点数据库的快照</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="alt text" src="../image-16.png" /></p>
+</details>
+<h2 id="3-keys">3 Keys<a class="headerlink" href="#3-keys" title="Permanent link">&para;</a></h2>
+<ul>
+<li>K is a <strong>superkey (超键)</strong> of R if values for K are sufficient to identify (唯一确定) unique tuple of each possible relation r(R).
+ e.g. {ID} or {ID, name}</li>
+<li><strong>Superkey K</strong> is a <strong>candidate key (候选键)</strong> if K is minimal.
+即 K 中没有冗余属性.候选键是超键中最小的集合，它的任何一个真子集不可确定唯一一个元组</li>
+<li>One of the candidate keys is selected to be the primary key (主键).</li>
+<li><strong>Foreign key (外键)</strong> Relation r1 may include among its attributes the primary key of another relation r2. This attribute is called a foreign key from r1, referencing r2.
+类似于指针，外键限制就是关系 r1 引用的主键必须在关系 r2 中出现。</li>
+<li><strong>Referential integrity(参照完整性)</strong> constraint  requires that  the values appearing in specified attribute(s) A of any tuples in the referencing relation r1 also appear in specified attribute(s) B of at least one tuple in the referenced relation r2.<strong>类似于外键限制，但不局限于主键</strong>.</li>
+</ul>
+<details>
+<summary>外键</summary>
+<p><img alt="alt text" src="../image-17.png" /></p>
+</details>
+<details>
+<summary>参照完整性</summary>
+<p><img alt="alt text" src="../image-18.png" /></p>
+</details>
+<h2 id="4-database-and-schema-diagram">4 Database and Schema diagram<a class="headerlink" href="#4-database-and-schema-diagram" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><img alt="alt text" src="../image-19.png" /></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">schema diagram</p>
+<p><img alt="alt text" src="../image-20.png" />
+<img alt="alt text" src="../image-22.png" /></p>
+</div>
+<h2 id="5-rational-query-languages">5 Rational Query languages<a class="headerlink" href="#5-rational-query-languages" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Procedural vs.non-procedural, or declarative</li>
+<li>“Pure” languages:<ul>
+<li><strong>Relational algebra(关系代数)</strong></li>
+<li>Tuple relational calculus（元组关系演算）</li>
+<li>Domain relational calculus（域关系演算）</li>
+</ul>
+</li>
+<li>The above 3 pure languages are equivalent in computing power</li>
+<li>We will concentrate on relational algebra<ul>
+<li>Not Turing-machine equivalent</li>
+<li>Consists of 6 basic operations</li>
+</ul>
+</li>
+</ul>
+<h3 id="51-select">5.1 Select<a class="headerlink" href="#51-select" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-23.png" /></p>
+<details class="select example">
+<summary>Select</summary>
+<p><img alt="alt text" src="../image-24.png" /></p>
+</details>
+<h3 id="52-project">5.2 project<a class="headerlink" href="#52-project" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-25.png" /></p>
+<details class="project example">
+<summary>Project</summary>
+<p><img alt="alt text" src="../image-26.png" /></p>
+</details>
+<h3 id="53-union">5.3 union<a class="headerlink" href="#53-union" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-27.png" /></p>
+<details class="union example">
+<summary>Union</summary>
+<p><img alt="alt text" src="../image-29.png" />
+<img alt="alt text" src="../image-30.png" /></p>
+</details>
+<h3 id="54-set-difference">5.4 set difference<a class="headerlink" href="#54-set-difference" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-31.png" /></p>
+<details class="set difference example">
+<summary>Set</summary>
+<p><img alt="alt text" src="../image-32.png" /></p>
+</details>
+<h3 id="55-cartesian-product-operation">5.5 Cartesian-Product Operation<a class="headerlink" href="#55-cartesian-product-operation" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-33.png" /></p>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="alt text" src="../image-34.png" /></p>
+</details>
+<h3 id="56-compositions-of-operations">5.6 compositions of operations<a class="headerlink" href="#56-compositions-of-operations" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-35.png" /></p>
+<h3 id="57-rename-operations">5.7 rename operations<a class="headerlink" href="#57-rename-operations" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-36.png" />
+密度符号ρ！</p>
+<h3 id="58-some-query-examples">5.8 Some Query Examples<a class="headerlink" href="#58-some-query-examples" title="Permanent link">&para;</a></h3>
+<details class="example1" open="open">
+<summary>Example1</summary>
+<p><img alt="alt text" src="../image-37.png" /></p>
+</details>
+<details class="example2" open="open">
+<summary>Example2</summary>
+<p><img alt="alt text" src="../image-38.png" /></p>
+</details>
+<details class="example3" open="open">
+<summary>Example3</summary>
+<p><img alt="alt text" src="../image-39.png" />
+<img alt="alt text" src="../image-40.png" />
+找到比某个d中的salary小的所有salary，用全部的salary减去这些已经失去竞争资格的salary，然后就可以得到更小的范围，更容易找到最大的salary</p>
+</details>
+<h3 id="59-formal-definition">5.9 Formal Definition<a class="headerlink" href="#59-formal-definition" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-41.png" /></p>
+<h3 id="510-additional-operands">5.10 Additional operands<a class="headerlink" href="#510-additional-operands" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><img alt="alt text" src="../image-42.png" /></p>
+</div>
+<h4 id="5101-set-intersection">5.10.1 Set intersection<a class="headerlink" href="#5101-set-intersection" title="Permanent link">&para;</a></h4>
+<p><img alt="alt text" src="../image-43.png" /></p>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="alt text" src="../image-44.png" /></p>
+</details>
+<h4 id="5102-natural-join-operation">5.10.2 Natural-Join operation<a class="headerlink" href="#5102-natural-join-operation" title="Permanent link">&para;</a></h4>
+<p><img alt="alt text" src="../image-45.png" /></p>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="alt text" src="../image-46.png" /></p>
+</details>
+<ul>
+<li><strong>theta join</strong></li>
+</ul>
+<div class="admonition tip theta join">
+<p class="admonition-title">Tip</p>
+<p><img alt="alt text" src="../image-47.png" />
+一些性质，交换律、结合律，和theta join的符号表示</p>
+</div>
+<h4 id="5103-outer-join">5.10.3 Outer Join<a class="headerlink" href="#5103-outer-join" title="Permanent link">&para;</a></h4>
+<p><img alt="alt text" src="../image-48.png" />
+<img alt="alt text" src="../image-49.png" />
+第一个公式配着下面的example比较好理解，r减去((R)和(rs的natural set)的交),也就是左边的列都存在，右边的列内容全部用null补上。第二个工式同理。第三个同同理。</p>
+<details class="examples" open="open">
+<summary>Examples</summary>
+<p><img alt="alt text" src="../image-50.png" /></p>
+</details>
+<h4 id="5104-semijoin">5.10.4 semijoin<a class="headerlink" href="#5104-semijoin" title="Permanent link">&para;</a></h4>
+<p><img alt="alt text" src="../image-51.png" />
+简单来说，上式就是保留r中能与s相连的元组</p>
+<details class="example" open="open">
+<summary>Example</summary>
+<p><img alt="alt text" src="../image-52.png" />
+r.B=s.B,但最终要保证B和D都相等？为什么呢？</p>
+</details>
+<ul>
+<li>Semijoin（半连接） Operation and Nested Query
+<img alt="alt text" src="../image-53.png" /></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><img alt="alt text" src="../image-54.png" />
+<img alt="alt text" src="../image-55.png" /></p>
+</div>
+<h4 id="5105-division-operation">5.10.5 Division Operation<a class="headerlink" href="#5105-division-operation" title="Permanent link">&para;</a></h4>
+<p><img alt="alt text" src="../image-56.png" /></p>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="alt text" src="../image-57.png" />
+<img alt="alt text" src="../image-58.png" /></p>
+</details>
+<h3 id="511-aggregate-functions-and-operations">5.11  Aggregate Functions and Operations<a class="headerlink" href="#511-aggregate-functions-and-operations" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><img alt="alt text" src="../image-59.png" />
+<img alt="alt text" src="../image-60.png" /></p>
+</div>
+<p><img alt="alt text" src="../image-61.png" /></p>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="alt text" src="../image-62.png" /></p>
+</details>
+<h2 id="6-multiset-relational-algebra">6 Multiset Relational Algebra<a class="headerlink" href="#6-multiset-relational-algebra" title="Permanent link">&para;</a></h2>
+<p><img alt="alt text" src="../image-63.png" /></p>
+<p>这张图片的核心内容是关于纯关系代数和多集合（多重集）关系代数的区别和定义。具体内容包括：
+1. <strong>纯关系代数</strong>：移除所有重复项，例如在投影之后。
+2. <strong>多集合（多重集）关系代数</strong>：保留重复项以匹配SQL语义。
+   - SQL最初保留重复项是为了效率考虑，但现在这是一个特性。
+3. <strong>多集合关系代数的定义如下</strong>：
+   - <strong>选择（selection）</strong>：如果元组满足选择条件，则保留与输入中相同数量的重复元组。
+   - <strong>投影（projection）</strong>：每个输入元组产生一个输出元组，即使它是重复的。
+   - <strong>笛卡尔积（cross product）</strong>：如果在关系r中有m个t1的副本，在关系s中有n个t2的副本，则在r × s中有m × n个t1.t2的副本。
+4. <strong>集合运算符</strong>：
+   - <strong>并集（union）</strong>：m + n个副本。
+   - <strong>交集（intersection）</strong>：min(m, n)个副本。
+   - <strong>差集（difference）</strong>：min(0, m - n)个副本。
+这些概念帮助理解如何在不同的关系代数系统中处理和处理数据，特别是在涉及到重复数据的情况下。</p>
+<div class="admonition note">
+<p class="admonition-title">讲人话</p>
+<p>关系代数中，我们要求关系要是一个严格的集合。但实际数据库中并不是，而是一个多重集，允许有重复元素存在。因为一些操作的中间结果会带来重复元素，要保持集合特性开销很大，因此实际操作中不会去重。</p>
+</div>
+<h2 id="7-sql-and-relational-algebra">7 SQL and Relational Algebra<a class="headerlink" href="#7-sql-and-relational-algebra" title="Permanent link">&para;</a></h2>
+<p><img alt="alt text" src="../image-64.png" />
+<img alt="alt text" src="../image-65.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">说人话</p>
+<p><img alt="alt text" src="../image-66.png" /></p>
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        此页面有帮助吗？
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9zm4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21zm0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12zM15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3zm0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              谢谢你的反馈！
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+  <!-- Giscus 评论区 -->
+  <script src="https://giscus.app/client.js"
+        data-repo="younger234/mkdocssecond"
+        data-repo-id="R_kgDONrM2cw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDONrM2c84CnLS4"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../Introduction/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Introduction">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Introduction
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../SQL%E8%AF%AD%E8%A8%80/" class="md-footer__link md-footer__link--next" aria-label="下一页: SQL语言">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                SQL语言
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.prune", "navigation.tracking", "navigation.indexes", "navigation.tracking", "navigation.top", "navigation.footer", "header.autohide", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.code.annotate", "material.extensions.emoji.twemoji"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
