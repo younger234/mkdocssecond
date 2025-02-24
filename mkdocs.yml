@@ -23,9 +23,11 @@ nav:
     - 计算机组成: 计算机专业课/计算机组成.md
     - 数据库系统: 
       - Introduction: 计算机专业课/数据库系统/Introduction.md
+      - chapter2: 计算机专业课/数据库系统/chapter2.md
       - SQL语言: 计算机专业课/数据库系统/SQL语言.md
     - oop:
       - Introduction: 计算机专业课/oop/Introduction.md
+      - chapter1: 计算机专业课/oop/chapter1.md
     - 计算机体系结构: 
       - Introduction: 计算机专业课/计算机体系结构/Introduction.md      
 
@@ -38,11 +40,13 @@ nav:
     - CUDA编程: 
       - Introduction: 自己的课/CUDA编程/Introduction.md
       - lecture1: 自己的课/CUDA编程/lecture1.md
+      - python cuda: 自己的课/CUDA编程/python cuda.md
   - LeetCode:
     - Introduction: LeetCode/Introduction.md
     - chapter1: LeetCode/chapter1.md 
     - chapter2: LeetCode/chapter2.md
     - chapter3: LeetCode/chapter3.md
+    - chapter4: LeetCode/chapter4.md
   - 昏黄色的记忆~: 
     - Introduction: 记忆/Introduction.md
 
