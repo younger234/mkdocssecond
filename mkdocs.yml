@@ -9,7 +9,9 @@ nav:
     - 离散数学: 
       - Introduction: 通识基础课/离散数学/Introduction.md
       - chapter1: 通识基础课/离散数学/chapter1.md
-    - 工程图学: 通识基础课/工程图学/chapter1.md
+    - 工程图学: 
+      - chapter1: 通识基础课/工程图学/chapter1.md
+      - chapter2: 通识基础课/工程图学/chapter2.md
     - 毛概: 通识基础课/毛概/Introduction.md
     
   
@@ -30,6 +32,7 @@ nav:
       - chapter1: 计算机专业课/oop/chapter1.md
     - 计算机体系结构: 
       - Introduction: 计算机专业课/计算机体系结构/Introduction.md      
+      - chapter1: 计算机专业课/计算机体系结构/chapter1.md
 
   - 自己的课:
     - Introduction: 自己的课/Introduction.md
@@ -41,6 +44,9 @@ nav:
       - Introduction: 自己的课/CUDA编程/Introduction.md
       - lecture1: 自己的课/CUDA编程/lecture1.md
       - python cuda: 自己的课/CUDA编程/python cuda.md
+    - pytorch:
+      - chapter1: 自己的课/pytorch/chapter1.md
+  
   - LeetCode:
     - Introduction: LeetCode/Introduction.md
     - chapter1: LeetCode/chapter1.md 
