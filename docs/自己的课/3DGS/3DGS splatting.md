@@ -130,4 +130,18 @@ n是前面的底边距离眼睛的距离，f是后面的底边距离眼睛的距
 ![alt text](image-42.png)
 
 
+
+![alt text](image-43.png)
+![alt text](image-44.png)
+
+!!! tip
+    C = Ci * Ai * Ti
+    (颜色(由球谐函数计算得到)，不透明度，没有被阻挡的概率，)
+
+![alt text](image-45.png)
+![alt text](image-46.png)
+
+
 # 机器学习与参数评估
+![alt text](image-47.png)
+![alt text](image-48.png)

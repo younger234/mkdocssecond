@@ -26,6 +26,7 @@ nav:
     - 数据库系统: 
       - Introduction: 计算机专业课/数据库系统/Introduction.md
       - chapter2: 计算机专业课/数据库系统/chapter2.md
+      - chapter3: 计算机专业课/数据库系统/chapter3.md
       - SQL语言: 计算机专业课/数据库系统/SQL语言.md
     - oop:
       - Introduction: 计算机专业课/oop/Introduction.md

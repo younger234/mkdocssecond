@@ -1,0 +1,2487 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../chapter2/">
+      
+      
+        <link rel="next" href="../SQL%E8%AF%AD%E8%A8%80/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+    
+    
+      
+        <title>chapter3 - younger234's notebook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter3-introduction-to-sql" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="younger234&#39;s notebook" class="md-header__button md-logo" aria-label="younger234's notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            younger234's notebook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              chapter3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to automatic mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to automatic mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="lime" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  主页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E9%80%9A%E8%AF%86%E5%9F%BA%E7%A1%80%E8%AF%BE/Introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  通识基础课
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E9%80%9A%E8%AF%86%E9%80%89%E4%BF%AE%E8%AF%BE/Introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  通识选修课
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  计算机专业课
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E8%87%AA%E5%B7%B1%E7%9A%84%E8%AF%BE/Introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  自己的课
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../LeetCode/Introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  LeetCode
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E8%AE%B0%E5%BF%86/Introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  昏黄色的记忆~
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="younger234&#39;s notebook" class="md-nav__button md-logo" aria-label="younger234's notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    younger234's notebook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    主页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../%E9%80%9A%E8%AF%86%E5%9F%BA%E7%A1%80%E8%AF%BE/Introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    通识基础课
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../%E9%80%9A%E8%AF%86%E9%80%89%E4%BF%AE%E8%AF%BE/Introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    通识选修课
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    计算机专业课
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            计算机专业课
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数字逻辑设计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构基础
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ADS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    高级数据结构与算法基础
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机组成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数据库系统
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            数据库系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    chapter3
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    chapter3
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview-of-the-sql-query-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 overview of the SQL Query Language
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-data-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 Data Definition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 Data Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-domain-types-in-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Domain Types in SQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-built-in-data-types-in-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 built-in Data Types in SQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-create-table-construct" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Create Table Construct
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-drop-and-alter-table-constructs" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 drop and alter table constructs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-basic-query-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Basic Query Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Basic Query Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-the-select-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 the select clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-the-where-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 the where clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-the-from-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 the from clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-natural-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 natural join
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-the-rename-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 the rename operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-string-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6 string operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-ordering-the-display-of-tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7 ordering the display of tuples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-the-limit-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8 the limit clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-the-set-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9 the set clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-the-null-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.10 the null value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-aggregate-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.11 aggregate functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.11 aggregate functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3111-having-clauses" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.11.1 having clauses
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      查询语句：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      详细解释：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      查询步骤：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="总结：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3112-null-values-and-aggregates" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.11.2 null values and aggregates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-nested-subqueries" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.12 nested subqueries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.12 nested subqueries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3121-set-membership" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.12.1 set membership
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3122-set-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.12.2 set comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3123-scalar-subquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.12.3 scalar subquery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3124-test-for-empty-relations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.12.4 test for empty relations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3125-test-for-absence-of-duplicate-tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.12.5 test for absence of duplicate tuples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-with-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.13 with clause
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-modification-of-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Modification of the Database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 Modification of the Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 deletion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-insertion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 insertion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 updates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SQL%E8%AF%AD%E8%A8%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQL语言
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../oop/Introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    oop
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/Introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    计算机体系结构
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../%E8%87%AA%E5%B7%B1%E7%9A%84%E8%AF%BE/Introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    自己的课
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../LeetCode/Introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    LeetCode
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../%E8%AE%B0%E5%BF%86/Introduction/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    昏黄色的记忆~
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview-of-the-sql-query-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 overview of the SQL Query Language
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-data-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 Data Definition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 Data Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-domain-types-in-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Domain Types in SQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-built-in-data-types-in-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 built-in Data Types in SQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-create-table-construct" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Create Table Construct
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-drop-and-alter-table-constructs" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 drop and alter table constructs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-basic-query-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Basic Query Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Basic Query Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-the-select-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 the select clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-the-where-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 the where clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-the-from-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 the from clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-natural-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 natural join
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-the-rename-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 the rename operation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-string-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6 string operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-ordering-the-display-of-tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7 ordering the display of tuples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-the-limit-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8 the limit clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-the-set-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9 the set clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-the-null-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.10 the null value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-aggregate-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.11 aggregate functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.11 aggregate functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3111-having-clauses" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.11.1 having clauses
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      查询语句：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      详细解释：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      查询步骤：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="总结：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3112-null-values-and-aggregates" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.11.2 null values and aggregates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-nested-subqueries" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.12 nested subqueries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.12 nested subqueries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3121-set-membership" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.12.1 set membership
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3122-set-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.12.2 set comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3123-scalar-subquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.12.3 scalar subquery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3124-test-for-empty-relations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.12.4 test for empty relations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3125-test-for-absence-of-duplicate-tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.12.5 test for absence of duplicate tuples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-with-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.13 with clause
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-modification-of-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Modification of the Database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 Modification of the Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 deletion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-insertion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 insertion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 updates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+
+<h1 id="chapter3-introduction-to-sql">chapter3: introduction to SQL<a class="headerlink" href="#chapter3-introduction-to-sql" title="Permanent link">&para;</a></h1>
+<h2 id="1-overview-of-the-sql-query-language">1 overview of the SQL Query Language<a class="headerlink" href="#1-overview-of-the-sql-query-language" title="Permanent link">&para;</a></h2>
+<p><img alt="alt text" src="../image-67.png" /></p>
+<h2 id="2-data-definition">2 Data Definition<a class="headerlink" href="#2-data-definition" title="Permanent link">&para;</a></h2>
+<h3 id="21-domain-types-in-sql">2.1 Domain Types in SQL<a class="headerlink" href="#21-domain-types-in-sql" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>char(n).</code> Fixed length character string, with user-specified length n.
+定长字符串. C 语言里字符串结尾有 <code>\0</code>, 但数据库里没有，长度由定义而得。</li>
+<li><code>varchar(n).</code> Variable length character strings, with user-specified maximum length n.
+不定长字符串。不同的数据类型比较可能有问题（比如定长和不定长的字符串）</li>
+<li><code>int.</code> Integer (a finite subset of the integers that is machine-dependent).</li>
+<li><code>smallint.</code> Small integer (a machine-dependent subset of the integer domain type).</li>
+<li><code>numeric(p,d).</code> Fixed point number, with user-specified precision of p digits, with d digits to the right of decimal point.
+p 表示有效数字位数, d 表示小数点后多少位。 e.g. - <code>number(3,1)</code> allows 44.5 to be store exactly, but neither 444.5 or 0.32</li>
+<li><code>real, double precision.</code> Floating point and double-precision floating point numbers, with machine-dependent precision.</li>
+<li><code>float(n).</code> Floating point number, with user-specified precision of at least n digits.</li>
+</ul>
+<h3 id="22-built-in-data-types-in-sql">2.2 built-in Data Types in SQL<a class="headerlink" href="#22-built-in-data-types-in-sql" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>date:</code>Dates, containing a (4 digit) year, month and date
+e.g. <code>date ‘2005-7-27’</code></li>
+<li><code>time:</code> Time of day, in hours, minutes and seconds. <strong>e.g.</strong> time ‘09:00:30’ time ‘09:00:30.75’</li>
+<li><code>timestamp:</code> date plus time of day <strong>e.g.</strong> <code>timestamp ‘2005-7-27 09:00:30.75’</code></li>
+<li><code>interval:</code> period of time <strong>e.g.</strong><code>interval ‘1’ day</code><ul>
+<li>Subtracting a date/time/timestamp value from another gives an interval value.</li>
+<li>Interval values can be added to date/time/timestamp values</li>
+<li>built-in date, time functions: current_date(), current_time(), year(x), month(x), day(x), hour(x), minute(x), second(x)</li>
+</ul>
+</li>
+</ul>
+<h3 id="23-create-table-construct">2.3 Create Table Construct<a class="headerlink" href="#23-create-table-construct" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-68.png" /></p>
+<details>
+<summary>Integrity Constraints in Create table</summary>
+<p><img alt="alt text" src="../image-69.png" />
+primary key代表不能为空，同时表内不能有相同的keys，否则这样的数据是插不进去的
+foreign key代表引用对应表的主键</p>
+</details>
+<details>
+<summary>another example</summary>
+<p><img alt="alt text" src="../image-70.png" />
+- 当前情况下，学生A（ID=12345）可以在2023年秋季学期（semester='Fall', year=2023）注册课程CSC101（course_id='CSC101'）的两个不同部分（sec_id='001' 和 sec_id='002'）。这是因为主键组合（12345, CSC101, 001, Fall, 2023）和（12345, CSC101, 002, Fall, 2023）被视为不同的记录，数据库允许这种操作。
+- 如果从主键中移除 sec_id，主键将变为（12345, CSC101, Fall, 2023）。这样，数据库将不允许学生A在同一个学期内注册课程CSC101的多个部分，因为插入具有相同主键的记录会被拒绝。这种调整确保了学生不会在同一个学期内重复注册同一门课程的不同部分。</p>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">default 0</p>
+<p>在 SQL 中，default 0 是用于定义列的默认值的语法。具体来说，default 0 表示当向表中插入新记录时，如果没有为该列（这里是 tot_cred）提供明确的值，数据库将自动将该列的值设置为 0。</p>
+</div>
+<details>
+<summary>and more</summary>
+<p><img alt="alt text" src="../image-71.png" />
+如果引用的表中有条目被删除，可能会破坏完整性约束条件。有下面的方法：</p>
+<ul>
+<li>restrict: 如果有条目是被引用的，那么不允许删除。</li>
+<li>cascade: 引用的条目被删了之后，引用者也一并删除</li>
+<li>set null: 引用者的指针设为 null.</li>
+<li>
+<p>set default
+如果引用的表中有更新，也有类似上面的四种方法。
+在 create table 中定义</p>
+</li>
+<li>
+<p>on delete cascade |set null |restrict |set default</p>
+</li>
+<li>on update cascade |set null |restrict |set default</li>
+</ul>
+</details>
+<h3 id="24-drop-and-alter-table-constructs">2.4 drop and alter table constructs<a class="headerlink" href="#24-drop-and-alter-table-constructs" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-72.png" /></p>
+<h2 id="3-basic-query-structure">3 Basic Query Structure<a class="headerlink" href="#3-basic-query-structure" title="Permanent link">&para;</a></h2>
+<h3 id="31-the-select-clause">3.1 the select clause<a class="headerlink" href="#31-the-select-clause" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-73.png" /></p>
+<h3 id="32-the-where-clause">3.2 the where clause<a class="headerlink" href="#32-the-where-clause" title="Permanent link">&para;</a></h3>
+<p>The <code>where</code> clause specifies conditions that the result must satisfy.
+Corresponds to the selection predicate of the relational algebra.
+- Comparison results can be combined using the logical connectives and, or, and not.Comparisons can be applied to results of arithmetic expressions.<strong>e.g.</strong><code>select name from instructor where dept_name = ‘Comp. Sci.'  and salary &gt; 80000</code></p>
+<ul>
+<li>SQL includes a <strong>between</strong> comparison operator <strong>e.g.</strong> <code>select name from instructor where salary between 90000 and 100000</code></li>
+<li>Tuple comparison
+元组相等等价于各个元素都相等。 <strong>e.g.</strong> <code>select name, course_id from instructor, teaches where (instructor.ID, dept_name) = (teaches.ID, ’Biology’);</code></li>
+</ul>
+<h3 id="33-the-from-clause">3.3 the from clause<a class="headerlink" href="#33-the-from-clause" title="Permanent link">&para;</a></h3>
+<p>The <code>from</code> clause lists the relations involved in the query.
+Corresponds to the <strong>Cartesian product</strong> operation of the relational algebra.</p>
+<h3 id="34-natural-join">3.4 natural join<a class="headerlink" href="#34-natural-join" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">join</p>
+<p><img alt="alt text" src="../image-76.png" /></p>
+</div>
+<p><img alt="alt text" src="../image-74.png" /></p>
+<details>
+<summary>example</summary>
+<p><img alt="alt text" src="../image-75.png" /></p>
+</details>
+<details>
+<summary>example of unrelated but same name causing fault</summary>
+<p><img alt="alt text" src="../image-77.png" />
+直接三个自然连接的话instructor.dept_nme和course.dept_name会强制相等，但我们并不需要。
+所以为了改进我们有三种等价的改进方式。第一种是先把instructor和teaches自然连接，结果和course取笛卡尔积。第二种思路和第一种完全一样，用了join course using(course_id)，即只要求course_id相同的连接，可谓耳目一新。第三种就无脑写条件了。</p>
+</details>
+<details>
+<summary>再来一个例子</summary>
+<p><img alt="alt text" src="../image-78.png" /></p>
+</details>
+<h3 id="35-the-rename-operation">3.5 the rename operation<a class="headerlink" href="#35-the-rename-operation" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-79.png" />
+instructor as T &lt;==&gt; instructor T</p>
+<h3 id="36-string-operations">3.6 string operations<a class="headerlink" href="#36-string-operations" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-80.png" /></p>
+<ul>
+<li>匹配字符串 <code>'100 %'</code> 但是 <code>%</code> 符号被我们作为了通配符，这里我们需要用到转义符 <code>\</code>. <code>\%</code> 即将 <code>%</code>作为正常字符匹配。</li>
+<li><code>\</code> 也可以是一个基本符号，我们需要在后面写出 <code>escape</code> 表示其在这里作为转义符。类似地我们还可以将转义符定义为 <code>#</code>.</li>
+</ul>
+<p><img alt="alt text" src="../image-81.png" /></p>
+<h3 id="37-ordering-the-display-of-tuples">3.7 ordering the display of tuples<a class="headerlink" href="#37-ordering-the-display-of-tuples" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-82.png" /></p>
+<h3 id="38-the-limit-clause">3.8 the limit clause<a class="headerlink" href="#38-the-limit-clause" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-83.png" />
+limit 0,3 从第0行开始，输出三行，效果和直接输出前三行是一样滴</p>
+<h3 id="39-the-set-clause">3.9 the set clause<a class="headerlink" href="#39-the-set-clause" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>union, intersect, except</code> 是严格的集合操作，会对结果去重.</li>
+<li><code>union all, intersect all and except all</code>. 保持多重集。</li>
+</ul>
+<p><img alt="alt text" src="../image-84.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><img alt="alt text" src="../image-85.png" />
+not difficult to understand</p>
+</div>
+<h3 id="310-the-null-value">3.10 the null value<a class="headerlink" href="#310-the-null-value" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-86.png" />
+<img alt="alt text" src="../image-87.png" />
+a nice guy,"unknown"</p>
+<h3 id="311-aggregate-functions">3.11 aggregate functions<a class="headerlink" href="#311-aggregate-functions" title="Permanent link">&para;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><img alt="alt text" src="../image-88.png" /></p>
+</div>
+<h4 id="3111-having-clauses">3.11.1 having clauses<a class="headerlink" href="#3111-having-clauses" title="Permanent link">&para;</a></h4>
+<details>
+<summary>instructor table</summary>
+<p><img alt="alt text" src="../image-90.png" /></p>
+</details>
+<p><img alt="alt text" src="../image-89.png" />
+- 输出按组(dept_name)分好的,而且只有工资大于四万二的导师信息！</p>
+<details>
+<summary>SQL 查询解释</summary>
+<h3 id="_1">查询语句：<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">dept_name</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">cnt</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">instructor</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">100000</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">dept_name</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">cnt</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="_2">详细解释：<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong><code>FROM instructor</code></strong>：
+   - 查询从 <code>instructor</code> 表中获取数据。</p>
+</li>
+<li>
+<p><strong><code>WHERE salary &gt;= 100000</code></strong>：
+   - 过滤条件，只选择薪水大于或等于 100,000 的教师。</p>
+</li>
+<li>
+<p><strong><code>GROUP BY dept_name</code></strong>：
+   - 将结果按部门名称（<code>dept_name</code>）进行分组。这意味着每个部门会有一个对应的行。</p>
+</li>
+<li>
+<p><strong><code>COUNT(*) AS cnt</code></strong>：
+   - 对每个部门（<code>dept_name</code>）计算满足条件的教师人数，并将这个人数命名为 <code>cnt</code>。</p>
+</li>
+<li>
+<p><strong><code>HAVING COUNT(*) &gt; 10</code></strong>：
+   - 过滤分组后的结果，只保留那些教师人数（<code>cnt</code>）大于 10 的部门。
+   - <code>HAVING</code> 子句用于过滤分组后的结果，而 <code>WHERE</code> 子句用于过滤分组前的行。</p>
+</li>
+<li>
+<p><strong><code>ORDER BY cnt</code></strong>：
+   - 按教师人数（<code>cnt</code>）对结果进行排序。默认是升序排序（从小到大）。</p>
+</li>
+</ol>
+<h3 id="_3">示例：<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>假设 <code>instructor</code> 表中有以下数据：</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>name</th>
+<th>dept_name</th>
+<th>salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Alice</td>
+<td>CS</td>
+<td>120000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bob</td>
+<td>CS</td>
+<td>110000</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Charlie</td>
+<td>CS</td>
+<td>105000</td>
+</tr>
+<tr>
+<td>4</td>
+<td>David</td>
+<td>Math</td>
+<td>95000</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Eve</td>
+<td>Math</td>
+<td>102000</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Frank</td>
+<td>Math</td>
+<td>98000</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Grace</td>
+<td>Physics</td>
+<td>130000</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Heidi</td>
+<td>Physics</td>
+<td>125000</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Ivan</td>
+<td>Physics</td>
+<td>115000</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Judy</td>
+<td>Physics</td>
+<td>110000</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Kevin</td>
+<td>Physics</td>
+<td>105000</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Linda</td>
+<td>Physics</td>
+<td>100000</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Michael</td>
+<td>Physics</td>
+<td>95000</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Nancy</td>
+<td>Physics</td>
+<td>90000</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Oscar</td>
+<td>Physics</td>
+<td>85000</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">查询步骤：<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong><code>WHERE salary &gt;= 100000</code></strong>：
+   - 过滤出薪水大于或等于 100,000 的教师：
+     | ID  | name     | dept_name | salary  |
+     |-----|----------|-----------|---------|
+     | 1   | Alice    | CS        | 120000  |
+     | 2   | Bob      | CS        | 110000  |
+     | 3   | Charlie  | CS        | 105000  |
+     | 5   | Eve      | Math      | 102000  |
+     | 7   | Grace    | Physics   | 130000  |
+     | 8   | Heidi    | Physics   | 125000  |
+     | 9   | Ivan     | Physics   | 115000  |
+     | 10  | Judy     | Physics   | 110000  |
+     | 11  | Kevin    | Physics   | 105000  |
+     | 12  | Linda    | Physics   | 100000  |</p>
+</li>
+<li>
+<p><strong><code>GROUP BY dept_name</code></strong> 和 <strong><code>COUNT(*) AS cnt</code></strong>：
+   - 按部门分组并计算每个部门的教师人数：
+     | dept_name | cnt |
+     |-----------|-----|
+     | CS        | 3   |
+     | Math      | 1   |
+     | Physics   | 6   |</p>
+</li>
+<li>
+<p><strong><code>HAVING COUNT(*) &gt; 10</code></strong>：
+   - 过滤掉教师人数不超过 10 的部门。在这个例子中，所有部门的教师人数都小于或等于 10，所以结果集为空。</p>
+</li>
+</ol>
+<h3 id="_5">总结：<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>查询的目的是找出那些薪水大于或等于 100,000 的教师人数超过 10 的部门，并按教师人数排序。</li>
+<li>如果某个部门的教师人数超过 10，结果将显示该部门的名称和教师人数。</li>
+<li>在这个示例中，没有部门的教师人数超过 10，所以结果集为空。 </li>
+</ul>
+</details>
+<h4 id="3112-null-values-and-aggregates">3.11.2 null values and aggregates<a class="headerlink" href="#3112-null-values-and-aggregates" title="Permanent link">&para;</a></h4>
+<p><img alt="alt text" src="../image-91.png" /></p>
+<details>
+<summary>arithmetic with aggregate functions</summary>
+<p><img alt="alt text" src="../image-92.png" /></p>
+</details>
+<h3 id="312-nested-subqueries">3.12 nested subqueries<a class="headerlink" href="#312-nested-subqueries" title="Permanent link">&para;</a></h3>
+<p>A subquery is a select-from-where expression that is nested within another query.</p>
+<h4 id="3121-set-membership">3.12.1 set membership<a class="headerlink" href="#3121-set-membership" title="Permanent link">&para;</a></h4>
+<p><code>in,not in</code></p>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="alt text" src="../image-93.png" />
+<img alt="alt text" src="../image-94.png" /></p>
+</details>
+<h4 id="3122-set-comparison">3.12.2 set comparison<a class="headerlink" href="#3122-set-comparison" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>some</code> 某些成员</li>
+<li><code>all</code> 所有成员</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="alt text" src="../image-95.png" />
+<img alt="alt text" src="../image-96.png" /></p>
+</details>
+<h4 id="3123-scalar-subquery">3.12.3 scalar subquery<a class="headerlink" href="#3123-scalar-subquery" title="Permanent link">&para;</a></h4>
+<p><strong>scalar(标量) subquery</strong> is one whle is used where a single value is expected.</p>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="alt text" src="../image-97.png" /></p>
+</details>
+<h4 id="3124-test-for-empty-relations">3.12.4 test for empty relations<a class="headerlink" href="#3124-test-for-empty-relations" title="Permanent link">&para;</a></h4>
+<p><img alt="alt text" src="../image-101.png" /></p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><img alt="alt text" src="../image-102.png" />
+<img alt="alt text" src="../image-99.png" />
+<img alt="alt text" src="../image-98.png" /></p>
+</div>
+<h4 id="3125-test-for-absence-of-duplicate-tuples">3.12.5 test for absence of duplicate tuples<a class="headerlink" href="#3125-test-for-absence-of-duplicate-tuples" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>The unique construct tests whether a subquery has any duplicate tuples in its result.验证是否是一个集合，而非多重集。</p>
+</li>
+<li>
+<p>Evaluates to “true” on an empty set.可以将 unique 理解为 at most once.</p>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><img alt="alt text" src="../image-103.png" />
+<img alt="alt text" src="../image-104.png" /></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><img alt="alt text" src="../image-105.png" />
+<img alt="alt text" src="../image-106.png" /></p>
+</div>
+<h4 id="213-with-clause">2.13 with clause<a class="headerlink" href="#213-with-clause" title="Permanent link">&para;</a></h4>
+<h2 id="4-modification-of-the-database">4 Modification of the Database<a class="headerlink" href="#4-modification-of-the-database" title="Permanent link">&para;</a></h2>
+<h3 id="41-deletion">4.1 deletion<a class="headerlink" href="#41-deletion" title="Permanent link">&para;</a></h3>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="alt text" src="../image-107.png" /></p>
+</details>
+<h3 id="42-insertion">4.2 insertion<a class="headerlink" href="#42-insertion" title="Permanent link">&para;</a></h3>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="alt text" src="../image-108.png" /></p>
+</details>
+<p>除了基本写法，我们还可以在 insert 后跟查询语句，把查询结果插入到表里去。</p>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="alt text" src="../image-109.png" />
+把老师加入学生里面</p>
+</details>
+<h3 id="43-updates">4.3 updates<a class="headerlink" href="#43-updates" title="Permanent link">&para;</a></h3>
+<p>update ... set ...</p>
+<p>The order is important. So it can be done better using the case statement.</p>
+<details class="example">
+<summary>Example</summary>
+<p><img alt="alt text" src="../image-110.png" /></p>
+</details>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        此页面有帮助吗？
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9zm4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21zm0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12zM15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3zm0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              谢谢你的反馈！
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+  <!-- Giscus 评论区 -->
+  <script src="https://giscus.app/client.js"
+        data-repo="younger234/mkdocssecond"
+        data-repo-id="R_kgDONrM2cw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDONrM2c84CnLS4"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../chapter2/" class="md-footer__link md-footer__link--prev" aria-label="上一页: chapter2">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                chapter2
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../SQL%E8%AF%AD%E8%A8%80/" class="md-footer__link md-footer__link--next" aria-label="下一页: SQL语言">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                SQL语言
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.prune", "navigation.tracking", "navigation.indexes", "navigation.tracking", "navigation.top", "navigation.footer", "header.autohide", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.code.annotate", "material.extensions.emoji.twemoji"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

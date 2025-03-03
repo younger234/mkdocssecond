@@ -3,6 +3,7 @@
 ## 1.Structure of Relational Databases
 ### 1.1 Concepts
 Formally, given sets `D1, D2, …. Dn` ,a `relation r` is a subset of  `D1 x  D2  x … x Dn`.Thus, a relation is a set of `n-tuples (a1, a2, …, an)` where each `ai 属于 Di`.
+就是说，relation是好几个元组tuple
 
 !!! example
     ![alt text](image-15.png)
@@ -76,7 +77,7 @@ Order of tuples is irrelevant (tuples may be stored in an arbitrary order)
 ??? select example
     ![alt text](image-24.png)
 
-### 5.2 project
+### 5.2 project投影
 ![alt text](image-25.png)
 
 ??? project example
@@ -85,12 +86,16 @@ Order of tuples is irrelevant (tuples may be stored in an arbitrary order)
 ### 5.3 union
 ![alt text](image-27.png)
 
+作用对象是关系relation,可用来连接两个select
+
 ??? union example
     ![alt text](image-29.png)
     ![alt text](image-30.png)
 
 ### 5.4 set difference
 ![alt text](image-31.png)
+
+作用在两个relation，可用来对两个select相减
 
 ??? set difference example
     ![alt text](image-32.png)
@@ -121,10 +126,11 @@ Order of tuples is irrelevant (tuples may be stored in an arbitrary order)
 ???+ example3
     ![alt text](image-39.png)
     ![alt text](image-40.png)
-    找到比某个d中的salary小的所有salary，用全部的salary减去这些已经失去竞争资格的salary，然后就可以得到更小的范围，更容易找到最大的salary
+    只要存在比你的工资高的人，你的工资就被挑出来，然后所有工资减去所有你们的工资就是最高工资，也就是不会被挑出来的工资
 
 ### 5.9 Formal Definition
 ![alt text](image-41.png)
+这些都是关系代数表达式
 
 ### 5.10 Additional operands
 !!! note
@@ -186,6 +192,8 @@ Order of tuples is irrelevant (tuples may be stored in an arbitrary order)
     ![alt text](image-60.png)
 
 ![alt text](image-61.png)
+
+G1,G2等等是用来分组用的
 
 ??? example
     ![alt text](image-62.png)
