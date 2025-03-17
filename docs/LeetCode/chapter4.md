@@ -190,3 +190,194 @@ public:
     `value：`要设置的值，通常是一个 int 类型的值，但实际上只会使用该值的低 8 位（即一个字节）。
 
     `num：`要填充的字节数。
+
+# 37.解数独
+
+```cpp
+class Solution {
+private:
+    bool line[9][9];
+    bool column[9][9];
+    bool block[3][3][9];
+    bool valid;
+    vector<pair<int,int>> spaces;
+
+
+
+public:
+
+    void dfs(vector<vector<char>> & b,int idx){
+        if(idx==spaces.size()){
+            valid=true;
+            return;
+        }
+
+        auto [i,j]= spaces[idx];
+
+        for(int num=0;num<9&&!valid;num++){
+            if(!line[i][num]&&!column[j][num]&&!block[i/3][j/3][num]){
+                line[i][num]=column[j][num]=block[i/3][j/3][num]=true;
+                b[i][j]=num+'0'+1;
+                dfs(b,idx+1);
+                line[i][num]=column[j][num]=block[i/3][j/3][num]=false;
+                //b[i][j]='.';
+            }
+        }
+    }
+
+    void solveSudoku(vector<vector<char>>& board) {
+        memset(line,false,sizeof(line));
+        memset(column,false,sizeof(column));
+        memset(block,false,sizeof(block));
+        valid = false;
+
+
+        for(int i=0;i<9;i++){
+            for(int j=0;j<9;j++){
+                if(board[i][j]=='.'){
+                    spaces.emplace_back(i,j);
+                }
+                else{
+                    int digit = board[i][j] - '0' - 1;
+                    line[i][digit] = column[j][digit] = block[i/3][j/3][digit] = true;
+                    
+                }
+            }
+        }
+
+        dfs(board,0);
+
+    }
+};
+```
+
+- 回溯法经典题，回溯递归
+- 关注pair的使用，emplace_back(i,j)为添加元素，新建pair元素是用 auto [i,j]=···
+- 注意memset函数的用法
+- 本题中一定不要忘记valid的重要性，一经检查到正确结果，就停止继续递归
+- 回溯法中，递归之后不能加board[i][j]='.'
+- 自己再好好理解一下这道题，比较难，比较经典
+
+# 38.外观序列
+```cpp
+class Solution {
+public:
+    string countAndSay(int n) {
+        if(n==1) return "1";
+        string a=countAndSay(n-1);
+        string curr="";
+        int start=0;
+        int pos = 0;
+
+        while(pos<a.size()){
+            while(pos<a.size()&&a[pos]==a[start]) pos++;
+            curr += to_string(pos-start)+a[start];
+            start=pos;
+        }
+
+        return curr;
+
+    }
+};
+```
+
+!!! note
+    主要是要搞清楚c++标准字符串库中to_string函数的作用，可以把整型、浮点型等变成字符串直接加
+
+
+
+# 39.组合总和
+```cpp
+class Solution {
+public:
+
+    void dfs(vector<vector<int>> &ans,vector<int>&one,int target,vector<int>&c,int idx){
+        if(idx==c.size()) return;
+        if(target==0){
+            ans.push_back(one);
+            return;
+        }
+
+
+        //dfs(ans,one,target,c,idx+1);
+
+        if(target-c[idx]>=0){
+            one.push_back(c[idx]);
+            dfs(ans,one,target-c[idx],c,idx);
+            one.pop_back();
+        }
+
+        dfs(ans,one,target,c,idx+1);
+    }
+
+
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+        vector<int> one;
+        vector<vector<int>> ans;
+
+        dfs(ans,one,target,candidates,0);
+
+        return ans;
+        
+    }
+};
+```
+
+!!! note
+    又是一道经典的回溯法问题啊啊，可我还是看了解析才做出来呜呜┭┮﹏┭┮
+
+
+
+# 40.组合求数2
+
+要求和为target但是不能重复使用，这题感觉应该算是困难题啊，看了答案才明白。
+
+```cpp
+class Solution {
+
+private:
+    vector<pair<int,int>> freq;
+    vector<vector<int>>ans;
+    vector<int> sequence;
+
+public:
+    void dfs(int pos,int rest){
+        if(rest==0){
+            ans.push_back(sequence);
+            return;
+        }
+        if(pos == freq.size() || rest < freq[pos].first) {
+            return;
+        }
+
+        dfs(pos+1,rest);
+
+        int most = min(rest / freq[pos].first,freq[pos].second);
+
+        for(int i = 1;i<=most; ++i){
+            sequence.push_back(freq[pos].first);
+            dfs(pos+1, rest-i*freq[pos].first);
+        }
+        for( int i =1;i<= most; ++i){
+            sequence.pop_back();
+        }
+
+    }
+    
+
+    vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
+        sort(candidates.begin(),candidates.end());
+        
+        for(int num: candidates){
+            if(freq.empty()||num != freq.back().first){
+                freq.emplace_back(num,1);
+            }else{
+                ++freq.back().second;
+            } 
+        }
+        dfs(0,target);
+        return ans;
+    }
+};
+```
+

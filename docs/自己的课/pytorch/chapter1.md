@@ -131,6 +131,37 @@ python
 
 ![alt text](image-11.png)
 
+在PyTorch中，当你创建一个`torch.nn.Linear`层时，权重（weight）和偏置（bias）是自动为你初始化的。这些参数是层的内部属性，你可以在创建层之后直接访问它们。
+下面是一个例子，展示了如何创建一个`Linear`层，并访问其权重和偏置：
+```python
+import torch.nn as nn
+# 创建一个全连接层，输入特征数为1，输出特征数为1
+linear_layer = nn.Linear(1, 1)
+# 访问权重和偏置
+weight = linear_layer.weight
+bias = linear_layer.bias
+# 打印权重和偏置
+print("Weight:", weight)
+print("Bias:", bias)
+```
+当你运行这段代码时，你会看到如下输出（注意，由于权重和偏置是随机初始化的，所以你看到的数值可能与以下不同）：
+```
+Weight: Parameter containing:
+tensor([[0.0123]], requires_grad=True)
+Bias: Parameter containing:
+tensor([0.2345], requires_grad=True)
+```
+这里的`weight`是一个包含单个数值的1x1的张量（tensor），而`bias`是一个包含单个数值的张量。`requires_grad=True`表示这些参数在训练过程中会自动计算梯度，这对于后续的优化过程是必要的。
+在实际使用中，你不需要直接操作这些权重和偏置，因为它们会在你通过网络传递数据时自动被更新。如果你想要自定义权重和偏置的初始化，你可以使用以下方式：
+```python
+# 创建一个全连接层，并自定义权重和偏置
+linear_layer = nn.Linear(1, 1)
+linear_layer.weight.data.fill_(value)  # 将权重设置为特定的值
+linear_layer.bias.data.fill_(value)    # 将偏置设置为特定的值
+```
+在这里，`value`是你希望设置权重和偏置的数值。
+
+
 ```python
 import torch
 x_data = torch.Tensor([[1.0], [2.0], [3.0]])
@@ -222,4 +253,5 @@ x写到底
 # 加载数据集
 
 
-
+# 多分类
+![alt text](image-22.png)

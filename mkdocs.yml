@@ -12,6 +12,8 @@ nav:
     - 工程图学: 
       - chapter1: 通识基础课/工程图学/chapter1.md
       - chapter2: 通识基础课/工程图学/chapter2.md
+      - chapter3: 通识基础课/工程图学/chapter3.md
+      - chapter4: 通识基础课/工程图学/chapter4.md
     - 毛概: 通识基础课/毛概/Introduction.md
     
   
@@ -27,10 +29,12 @@ nav:
       - Introduction: 计算机专业课/数据库系统/Introduction.md
       - chapter2: 计算机专业课/数据库系统/chapter2.md
       - chapter3: 计算机专业课/数据库系统/chapter3.md
+      - chapter4: 计算机专业课/数据库系统/chapter4.md
       - SQL语言: 计算机专业课/数据库系统/SQL语言.md
     - oop:
       - Introduction: 计算机专业课/oop/Introduction.md
       - chapter1: 计算机专业课/oop/chapter1.md
+      - chapter2: 计算机专业课/oop/chapter2.md
     - 计算机体系结构: 
       - Introduction: 计算机专业课/计算机体系结构/Introduction.md      
       - chapter1: 计算机专业课/计算机体系结构/chapter1.md

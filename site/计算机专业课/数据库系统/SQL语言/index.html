@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../chapter3/">
+        <link rel="prev" href="../chapter4/">
       
       
         <link rel="next" href="../../oop/Introduction/">
@@ -715,6 +715,8 @@
       
         
       
+        
+      
     
     
       
@@ -819,6 +821,28 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -831,6 +855,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    SQL语言
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -841,6 +877,103 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      学生和俱乐部信息的关系模式：
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL查询：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SQL查询：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      (1) 查找计算机科学系参加舞蹈俱乐部的学生姓名
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-jl-sun" class="md-nav__link">
+    <span class="md-ellipsis">
+      (2) 查找参加由JL SUN监督的所有俱乐部的学生姓名
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      (3) 查找只包含女生的俱乐部
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      (4) 对于每个系，找出加入任何俱乐部的学生百分比
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      (5) 找出年龄差异最大的两名学生
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-select-s1sid-s2sid-from-student-as-s1-student-as-s2-where-s1age-s2age-all-select-s3age-s4age-from-student-as-s3-student-as-s4-select-s1sid-s2sid-from-student-as-s1-student-as-s2-order-by-s1age-s2age-desc-limit-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      -- 使用子查询 SELECT s1.sid, s2.sid FROM student AS s1, student AS s2 WHERE s1.age - s2.age &gt;= ALL (SELECT s3.age - s4.age FROM student AS s3, student AS s4); -- 另一种解决方案 SELECT s1.sid, s2.sid FROM student AS s1, student AS s2 ORDER BY s1.age - s2.age DESC LIMIT 1;
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -863,6 +996,8 @@
   
     
     
+      
+        
       
         
       
@@ -1139,6 +1274,92 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      学生和俱乐部信息的关系模式：
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL查询：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SQL查询：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      (1) 查找计算机科学系参加舞蹈俱乐部的学生姓名
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-jl-sun" class="md-nav__link">
+    <span class="md-ellipsis">
+      (2) 查找参加由JL SUN监督的所有俱乐部的学生姓名
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      (3) 查找只包含女生的俱乐部
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      (4) 对于每个系，找出加入任何俱乐部的学生百分比
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      (5) 找出年龄差异最大的两名学生
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-select-s1sid-s2sid-from-student-as-s1-student-as-s2-where-s1age-s2age-all-select-s3age-s4age-from-student-as-s3-student-as-s4-select-s1sid-s2sid-from-student-as-s1-student-as-s2-order-by-s1age-s2age-desc-limit-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      -- 使用子查询 SELECT s1.sid, s2.sid FROM student AS s1, student AS s2 WHERE s1.age - s2.age &gt;= ALL (SELECT s3.age - s4.age FROM student AS s3, student AS s4); -- 另一种解决方案 SELECT s1.sid, s2.sid FROM student AS s1, student AS s2 ORDER BY s1.age - s2.age DESC LIMIT 1;
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1161,6 +1382,96 @@
 <p class="admonition-title">Tip</p>
 <p>CSDN讲的详细，内容多，菜鸟教程更精简，方便</p>
 </div>
+<hr />
+<h3 id="_1">学生和俱乐部信息的关系模式：<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>student( sid, name, age, gender, department)</strong></li>
+<li><strong>club(cid, name, supervisor)</strong></li>
+<li><strong>member( sid, cid, date)</strong></li>
+</ul>
+<h3 id="sql_1">SQL查询：<a class="headerlink" href="#sql_1" title="Permanent link">&para;</a></h3>
+<h4 id="1">(1) 查找计算机科学系参加舞蹈俱乐部的学生姓名<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">-- 使用自然连接</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">student</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">student</span><span class="w"> </span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">NATURAL</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">member</span><span class="w"> </span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">NATURAL</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">club</span><span class="w"> </span><span class="k">USING</span><span class="p">(</span><span class="n">cid</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">department</span><span class="o">=</span><span class="s1">&#39;CS&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">club</span><span class="p">.</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Dancing&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">-- 另一种解决方案</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">student</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">FROM</span><span class="w"> </span><span class="n">student</span><span class="p">,</span><span class="w"> </span><span class="n">member</span><span class="p">,</span><span class="w"> </span><span class="n">club</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">student</span><span class="p">.</span><span class="n">sid</span><span class="o">=</span><span class="n">member</span><span class="p">.</span><span class="n">sid</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span><span class="n">member</span><span class="p">.</span><span class="n">cid</span><span class="o">=</span><span class="n">club</span><span class="p">.</span><span class="n">cid</span><span class="w"> </span><span class="k">AND</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="n">department</span><span class="o">=</span><span class="s1">&#39;CS&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">      </span><span class="n">club</span><span class="p">.</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Dancing&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="2-jl-sun">(2) 查找参加由JL SUN监督的所有俱乐部的学生姓名<a class="headerlink" href="#2-jl-sun" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- 使用自然连接和分组</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">student</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">student</span><span class="w"> </span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">NATURAL</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">member</span><span class="w"> </span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">NATURAL</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">club</span><span class="w"> </span><span class="k">USING</span><span class="p">(</span><span class="n">cid</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">supervisor</span><span class="o">=</span><span class="s1">&#39;JL Sun&#39;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">student</span><span class="p">.</span><span class="n">sid</span><span class="p">,</span><span class="w"> </span><span class="n">student</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">                   </span><span class="k">FROM</span><span class="w"> </span><span class="n">club</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">                   </span><span class="k">WHERE</span><span class="w"> </span><span class="n">supervisor</span><span class="o">=</span><span class="s1">&#39;JL Sun&#39;</span><span class="p">);</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c1">-- 另一种解决方案</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="k">FROM</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="n">S</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="k">WHERE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">  </span><span class="p">(</span><span class="w">    </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">cid</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">club</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">supervisor</span><span class="o">=</span><span class="s1">&#39;JL Sun&#39;</span><span class="p">)</span><span class="w">         </span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">      </span><span class="k">EXCEPT</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">      </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">cid</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">       </span><span class="k">FROM</span><span class="w"> </span><span class="n">member</span><span class="w"> </span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">       </span><span class="k">NATURAL</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">club</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">       </span><span class="k">WHERE</span><span class="w"> </span><span class="n">club</span><span class="p">.</span><span class="n">supervisor</span><span class="o">=</span><span class="s1">&#39;JL Sun&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">member</span><span class="p">.</span><span class="n">sid</span><span class="o">=</span><span class="n">S</span><span class="p">.</span><span class="n">sid</span><span class="p">)</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">  </span><span class="p">);</span>
+</code></pre></div>
+<h4 id="3">(3) 查找只包含女生的俱乐部<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">-- 使用NOT EXISTS</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">cid</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">club</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="p">(</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">   </span><span class="k">FROM</span><span class="w"> </span><span class="n">student</span><span class="w"> </span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">   </span><span class="k">NATURAL</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">member</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">   </span><span class="k">WHERE</span><span class="w"> </span><span class="n">student</span><span class="p">.</span><span class="n">gender</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">         </span><span class="n">member</span><span class="p">.</span><span class="n">cid</span><span class="o">=</span><span class="n">club</span><span class="p">.</span><span class="n">cid</span><span class="p">)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">);</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c1">-- 另一种解决方案</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">cid</span><span class="w"> </span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="k">FROM</span><span class="w"> </span><span class="n">student</span><span class="w"> </span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="k">NATURAL</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">member</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">student</span><span class="p">.</span><span class="n">gender</span><span class="o">=</span><span class="s1">&#39;F&#39;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">cid</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">                  </span><span class="k">FROM</span><span class="w"> </span><span class="n">member</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">                  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">member</span><span class="p">.</span><span class="n">cid</span><span class="o">=</span><span class="n">cid</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="4">(4) 对于每个系，找出加入任何俱乐部的学生百分比<a class="headerlink" href="#4" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="w"> </span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">       </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">member</span><span class="p">.</span><span class="n">sid</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">student</span><span class="p">.</span><span class="n">sid</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">percentage</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">student</span><span class="w"> </span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">NATURAL</span><span class="w"> </span><span class="k">LEFT</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">member</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="5">(5) 找出年龄差异最大的两名学生<a class="headerlink" href="#5" title="Permanent link">&para;</a></h4>
+<h2 id="-select-s1sid-s2sid-from-student-as-s1-student-as-s2-where-s1age-s2age-all-select-s3age-s4age-from-student-as-s3-student-as-s4-select-s1sid-s2sid-from-student-as-s1-student-as-s2-order-by-s1age-s2age-desc-limit-1"><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">-- 使用子查询</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">s1</span><span class="p">.</span><span class="n">sid</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">.</span><span class="n">sid</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">s2</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">s1</span><span class="p">.</span><span class="n">age</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">s2</span><span class="p">.</span><span class="n">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="k">ALL</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">s3</span><span class="p">.</span><span class="n">age</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">s4</span><span class="p">.</span><span class="n">age</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">       </span><span class="k">FROM</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">s3</span><span class="p">,</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">s4</span><span class="p">);</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1">-- 另一种解决方案</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">s1</span><span class="p">.</span><span class="n">sid</span><span class="p">,</span><span class="w"> </span><span class="n">s2</span><span class="p">.</span><span class="n">sid</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="k">FROM</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">s2</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">s1</span><span class="p">.</span><span class="n">age</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">s2</span><span class="p">.</span><span class="n">age</span><span class="w"> </span><span class="k">DESC</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="k">LIMIT</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div><a class="headerlink" href="#-select-s1sid-s2sid-from-student-as-s1-student-as-s2-where-s1age-s2age-all-select-s3age-s4age-from-student-as-s3-student-as-s4-select-s1sid-s2sid-from-student-as-s1-student-as-s2-order-by-s1age-s2age-desc-limit-1" title="Permanent link">&para;</a></h2>
+<p>以上是Markdown格式的SQL查询内容，每个查询后面都有对应的SQL代码块。</p>
 
 
 
@@ -1256,7 +1567,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../chapter3/" class="md-footer__link md-footer__link--prev" aria-label="上一页: chapter3">
+          <a href="../chapter4/" class="md-footer__link md-footer__link--prev" aria-label="上一页: chapter4">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1266,7 +1577,7 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                chapter3
+                chapter4
               </div>
             </div>
           </a>
