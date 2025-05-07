@@ -36,6 +36,7 @@ nav:
       - index: 计算机专业课/数据库系统/chapter14.md
       - query: 计算机专业课/数据库系统/chapter15.md
       - SQL语言: 计算机专业课/数据库系统/SQL语言.md
+      - chapter16: 计算机专业课/数据库系统/chapter16.md
     - oop:
       - Introduction: 计算机专业课/oop/Introduction.md
       - chapter1: 计算机专业课/oop/chapter1.md
