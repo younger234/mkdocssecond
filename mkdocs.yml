@@ -41,6 +41,15 @@ nav:
       - Introduction: 计算机专业课/oop/Introduction.md
       - chapter1: 计算机专业课/oop/chapter1.md
       - chapter2: 计算机专业课/oop/chapter2.md
+      - memory model: 计算机专业课/oop/memory model.md
+      - Class: 计算机专业课/oop/Class.md
+      - Operator overloading: 计算机专业课/oop/Operatotor overloading.md
+      - iterators: 计算机专业课/oop/iterators.md
+      - template: 计算机专业课/oop/template.md
+      - streams: 计算机专业课/oop/streams.md
+      - Exception: 计算机专业课/oop/Exception.md
+      - smart pointer: 计算机专业课/oop/smart pointer.md
+      
     - 计算机体系结构: 
       - Introduction: 计算机专业课/计算机体系结构/Introduction.md      
       - chapter1: 计算机专业课/计算机体系结构/chapter1.md
